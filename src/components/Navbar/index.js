@@ -1,8 +1,11 @@
-
+import Router from 'next/router'
 
 import { Container, Logo, MenuItem, MenuList, NavbarBox, ImageStyled, Login } from "./styles"
 
 export function Navbar() {
+  function redirectToSignUp() {
+    Router.push('/auth/signup')
+  }
 
   return (
       <NavbarBox>
@@ -16,7 +19,7 @@ export function Navbar() {
             <MenuItem>Sobre</MenuItem>
             <MenuItem>Contato</MenuItem>
           </MenuList>
-          <Login>
+          <Login onClick={redirectToSignUp}>
             Entrar
           </Login>
 
