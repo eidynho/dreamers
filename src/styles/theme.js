@@ -1,9 +1,10 @@
 export const theme = {
   body: '#121214',
   color: '#FAFAFA',
-  primary: '#FEE6CB',
-  secondary: '#ED8E1D',
-  secondaryOnHover: '#F3A13C',
+  primary: '#191919',
+  secondary: '#633AD9',
+  secondaryOnHover: '#7A56E6',
+  tertiary: '#232323',
 
-  primaryText: '#3F271F',
+  primaryText: '#FAFAFA',
 }
