@@ -1,12 +1,12 @@
 import { useEffect, useState } from 'react'
 import Router from 'next/router'
-import { useAuth } from '../../hooks/useAuth'
+import { useAuth } from '../hooks/useAuth'
 
-import { database } from '../../services/firebase'
+import { database } from '../services/firebase'
 import { onValue, push, ref } from 'firebase/database'
 
-import { Container, DashboardContent, Timeline, UserInfo, UserInfoAvatar, NewPost, NewPostTextConfig, NewPostTextArea, NewPostMedias, NewPostAvatar, PublishButton } from './styles'
-import { Posts } from '../../components/Posts'
+import { Container, DashboardContent, Timeline, UserInfo, UserInfoAvatar, NewPost, NewPostTextConfig, NewPostTextArea, NewPostMedias, NewPostAvatar, PublishButton } from '../styles/homeStyles'
+import { Posts } from '../components/Posts'
 
 export default function Dashboard() {
   const { user } = useAuth()

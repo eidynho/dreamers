@@ -1,10 +1,10 @@
 import Router from 'next/router'
 import Image from 'next/image'
 
-import { useAuth } from '../../../hooks/useAuth'
+import { useAuth } from '../../hooks/useAuth'
 
-import googleImg from '../../../images/google.svg'
-import { MainContentBox, ImageBox, SignUpContent, SignUpGoogle, Separator, Container } from "./styles"
+import googleImg from '../../images/google.svg'
+import { MainContentBox, ImageBox, SignUpContent, SignUpGoogle, Separator, Container } from "../../styles/signUpStyles"
 
 
 export default function SignUp() {
