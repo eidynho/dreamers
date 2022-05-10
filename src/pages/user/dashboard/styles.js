@@ -68,10 +68,9 @@ export const Timeline = styled.main`
   border-radius: 24px;
 `
 
-export const NewPost = styled.div`
+export const NewPost = styled.form`
   background-color: ${props => props.theme.primary};
-  width: 90%;
-  height: 212px;
+  width: 94%;
   margin: auto;
   padding: 24px;
   border-radius: 24px;
@@ -100,6 +99,7 @@ export const NewPostTextArea = styled.textarea`
   border-radius: 12px;
   outline: none;
   padding: 16px;
+  resize: vertical;
 `
 
 export const NewPostMedias = styled.div`

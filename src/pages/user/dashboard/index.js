@@ -1,6 +1,10 @@
+import { useEffect, useState } from 'react'
 import Router from 'next/router'
 import { useAuth } from '../../../hooks/useAuth'
 import Image from 'next/image'
+
+import { database } from '../../../services/firebase'
+import { onValue, push, ref } from 'firebase/database'
 
 import imageSvg from '../../../images/image.svg'
 import videoSvg from '../../../images/video.svg'
@@ -9,9 +13,45 @@ import { Container, DashboardContent, Timeline, UserInfo, UserInfoAvatar, NewPos
 
 export default function Dashboard() {
   const { user } = useAuth()
+  const [newPost, setNewPost] = useState('')
+  const [posts, setPosts] = useState([])
+
+  useEffect(() => {
+    const postsRef = ref(database, 'posts/')
+    onValue(postsRef, (value) => {
+      const data = value.val()
+      const parsedPosts = Object.entries(data).map(([key, value]) => {
+        return {
+          id: key,
+          content: value.content,
+          author: value.author,
+        }
+      })
+      
+      setPosts(parsedPosts)
+    })
+
+  }, [])
 
   function btnUserInfo() {
     Router.push(`/user/${user.id}`)
+  }
+
+  async function handleCreateNewPost(event) {
+    event.preventDefault()
+    if (newPost.trim === '') {
+      return
+    }
+
+    const post = {
+      content: newPost,
+      author: {
+        name: user?.name,
+        avatar: user.avatar
+      }
+    }
+    push(ref(database, 'posts/'), post)
+    setNewPost('')
   }
 
   return (
@@ -38,7 +78,9 @@ export default function Dashboard() {
 
           <Timeline>
 
-            <NewPost>
+            <NewPost
+              onSubmit={handleCreateNewPost}
+            >
               { user && ( 
                 <NewPostAvatar
                   src={user.avatar}
@@ -48,7 +90,12 @@ export default function Dashboard() {
               />) }
 
               <NewPostTextConfig>
-                <NewPostTextArea rows={4} placeholder="Compartilhe seu sonho..." />
+                <NewPostTextArea 
+                  rows={4} 
+                  placeholder="Compartilhe seu sonho..."
+                  onChange={event => setNewPost(event.target.value)}
+                  value={newPost}
+                />
 
                 <NewPostMedias>
                   <MediaButton>
@@ -67,14 +114,18 @@ export default function Dashboard() {
                       height={16}
                     />
                   </MediaButton>
-                  <PublishButton>
+                  <PublishButton
+                    type="submit"
+                  >
                     Publicar
                   </PublishButton>
                 </NewPostMedias>
 
               </NewPostTextConfig>
             </NewPost>
+            
 
+            <p>{JSON.stringify(posts)}</p>
           </Timeline>
 
         </Container>
