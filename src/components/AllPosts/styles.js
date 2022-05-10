@@ -19,7 +19,6 @@ export const PostAvatar = styled.img`
 
 export const PostContentWrapper = styled.div`
   width: 88%;
-
 `
 
 export const PostAuthor = styled.span`

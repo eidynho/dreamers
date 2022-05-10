@@ -5,8 +5,8 @@ import { useAuth } from '../hooks/useAuth'
 import { database } from '../services/firebase'
 import { onValue, push, ref } from 'firebase/database'
 
+import { AllPosts } from '../components/AllPosts'
 import { Container, DashboardContent, Timeline, UserInfo, UserInfoAvatar, NewPost, NewPostTextConfig, NewPostTextArea, NewPostMedias, NewPostAvatar, PublishButton } from '../styles/homeStyles'
-import { Posts } from '../components/Posts'
 
 export default function Dashboard() {
   const { user } = useAuth()
@@ -47,11 +47,11 @@ export default function Dashboard() {
     const post = {
       content: newPost,
       author: {
-        name: user?.name,
+        name: user.name,
         avatar: user.avatar
       }
     }
-    push(ref(database, 'posts/'), post)
+    await push(ref(database, 'posts/'), post)
     setNewPost('')
   }
 
@@ -75,7 +75,6 @@ export default function Dashboard() {
               </>
             }
           </UserInfo>
-
 
           <Timeline>
 
@@ -111,12 +110,12 @@ export default function Dashboard() {
             </NewPost>
             
             {posts && posts.map(post => (
-                <Posts
-                  key={post.id}
-                  content={post.content}
-                  author={post.author}
-                />
-            ))}
+              <AllPosts
+                key={post.id}
+                content={post.content}
+                author={post.author}
+              />
+            )).reverse()}
           </Timeline>
 
         </Container>

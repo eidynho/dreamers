@@ -1,7 +1,6 @@
-import { PostAuthor, PostAvatar, PostContent, PostContentWrapper, PostWrapper } from "./styles";
+import { PostAuthor, PostAvatar, PostContent, PostContentWrapper, PostWrapper } from './styles'
 
-
-export function Posts({ content, author }) {
+export function AllPosts({ content, author }) {
 
   return (
     <PostWrapper>
