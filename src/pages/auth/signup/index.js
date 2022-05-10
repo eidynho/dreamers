@@ -15,7 +15,7 @@ export default function SignUp() {
       await signInWithGoogle()
     }
 
-    Router.push('/user/dashboard')
+    Router.push('/home')
   }
 
   return (

@@ -51,7 +51,7 @@ export const UserInfo = styled.aside`
     }
   }
 
-  @media (max-width: 800px) {
+  @media (max-width: 1000px) {
     display: none;
   }
 `
@@ -62,16 +62,17 @@ export const UserInfoAvatar = styled(Image)`
 `
 
 export const Timeline = styled.main`
-  width: 800px;
+  width: 100%;
+  max-width: 800px;
   height: 100%;
-  margin: 16px 16px 16px 0;
+  margin: 16px auto 16px auto;
   border-radius: 24px;
 `
 
 export const NewPost = styled.form`
   background-color: ${props => props.theme.primary};
   width: 94%;
-  margin: auto;
+  margin: 0 auto 36px auto;
   padding: 24px;
   border-radius: 24px;
   display: flex;
@@ -149,7 +150,13 @@ export const PublishButton = styled.button`
   transition: all 0.2s ease;
 
   &:hover {
+    filter: brightness(1.25);
+    border: 1px solid ${props => props.theme.tertiary};
+  }
+
+  &:disabled {
     filter: brightness(0.85);
     border: 1px solid ${props => props.theme.tertiary};
+    cursor: initial;
   }
 `

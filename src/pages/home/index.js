@@ -1,15 +1,12 @@
 import { useEffect, useState } from 'react'
 import Router from 'next/router'
-import { useAuth } from '../../../hooks/useAuth'
-import Image from 'next/image'
+import { useAuth } from '../../hooks/useAuth'
 
-import { database } from '../../../services/firebase'
+import { database } from '../../services/firebase'
 import { onValue, push, ref } from 'firebase/database'
 
-import imageSvg from '../../../images/image.svg'
-import videoSvg from '../../../images/video.svg'
-
-import { Container, DashboardContent, Timeline, UserInfo, UserInfoAvatar, NewPost, NewPostTextConfig, NewPostTextArea, NewPostMedias, NewPostAvatar, PublishButton, MediaButton } from './styles'
+import { Container, DashboardContent, Timeline, UserInfo, UserInfoAvatar, NewPost, NewPostTextConfig, NewPostTextArea, NewPostMedias, NewPostAvatar, PublishButton } from './styles'
+import { Posts } from '../../components/Posts'
 
 export default function Dashboard() {
   const { user } = useAuth()
@@ -20,6 +17,11 @@ export default function Dashboard() {
     const postsRef = ref(database, 'posts/')
     onValue(postsRef, (value) => {
       const data = value.val()
+
+      if (!data) {
+        return
+      }
+
       const parsedPosts = Object.entries(data).map(([key, value]) => {
         return {
           id: key,
@@ -27,7 +29,6 @@ export default function Dashboard() {
           author: value.author,
         }
       })
-      
       setPosts(parsedPosts)
     })
 
@@ -39,7 +40,7 @@ export default function Dashboard() {
 
   async function handleCreateNewPost(event) {
     event.preventDefault()
-    if (newPost.trim === '') {
+    if (newPost.trim() === '') {
       return
     }
 
@@ -98,24 +99,9 @@ export default function Dashboard() {
                 />
 
                 <NewPostMedias>
-                  <MediaButton>
-                    <Image 
-                      src={imageSvg}
-                      alt="image"
-                      width={16}
-                      height={16}
-                    />
-                  </MediaButton>
-                  <MediaButton>
-                    <Image 
-                      src={videoSvg}
-                      alt="video"
-                      width={16}
-                      height={16}
-                    />
-                  </MediaButton>
                   <PublishButton
                     type="submit"
+                    disabled={!user || !newPost}
                   >
                     Publicar
                   </PublishButton>
@@ -124,8 +110,13 @@ export default function Dashboard() {
               </NewPostTextConfig>
             </NewPost>
             
-
-            <p>{JSON.stringify(posts)}</p>
+            {posts && posts.map(post => (
+                <Posts
+                  key={post.id}
+                  content={post.content}
+                  author={post.author}
+                />
+            ))}
           </Timeline>
 
         </Container>
