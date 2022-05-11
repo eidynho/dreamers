@@ -22,7 +22,7 @@ export const Title = styled.h1`
   line-height: 64px;
 `
 
-export const Subtitle = styled.h2`
+export const Subtitle = styled.p`
   width: 70%;
   font-size: 18px;
   font-weight: 500;

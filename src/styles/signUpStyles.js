@@ -33,6 +33,7 @@ export const SignUpGoogle = styled.button`
   width: 90%;
   height: 48px;
   background-color: ${props => props.theme.color};
+  color: ${props => props.theme.body};
   border: none;
   border-radius: 24px;
   cursor: pointer;
