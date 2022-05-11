@@ -1,7 +1,8 @@
 import Router from 'next/router'
 
-import { PostAvatar, PostContent, PostContentWrapper } from '../AllPosts/styles'
-import { PostAuthor, PostWrapper } from './styles'
+import { UserInfo } from '../UserInfo'
+import { PostContent, PostContentWrapper } from '../AllPosts/styles'
+import { Container, PostAuthor, PostWrapper, PostAvatar, MainContent } from './styles'
 
 
 export function PostDetails({ author, content }) {
@@ -10,16 +11,17 @@ export function PostDetails({ author, content }) {
   }
 
   return (
-    <PostWrapper>
-      <PostAvatar
-        src={author?.avatar}
-        alt={author?.name}
-      />
 
-      <PostContentWrapper>
-        <PostAuthor onClick={pushToProfile}>{author?.name}</PostAuthor>
-        <PostContent>{content}</PostContent>
-      </PostContentWrapper>
-    </PostWrapper>
+        <PostWrapper>
+          <PostAvatar
+            src={author?.avatar}
+            alt={author?.name}
+          />
+
+          <PostContentWrapper>
+            <PostAuthor onClick={pushToProfile}>{author?.name}</PostAuthor>
+            <PostContent>{content}</PostContent>
+          </PostContentWrapper>
+        </PostWrapper>
   )
 }

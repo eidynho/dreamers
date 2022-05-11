@@ -14,8 +14,6 @@ export const Container = styled.div`
   margin: auto;
 `
 
-
-
 export const Timeline = styled.main`
   width: 100%;
   max-width: 800px;
@@ -23,6 +21,3 @@ export const Timeline = styled.main`
   margin: 16px auto 16px auto;
   border-radius: 24px;
 `
-
-
-
