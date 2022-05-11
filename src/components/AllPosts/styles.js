@@ -8,6 +8,12 @@ export const PostWrapper = styled.div`
   border-radius: 24px;
   display: flex;
   align-items: flex-start;
+  transition: all 0.2s ease;
+  cursor: pointer;
+
+  &:hover {
+    filter: brightness(1.2);
+  }
 `
 
 export const PostAvatar = styled.img`
@@ -27,6 +33,9 @@ export const PostAuthor = styled.span`
   display: block;
   font-weight: 700;
   font-size: 14px;
+  cursor: pointer;
+  transition: color 0.2s ease;
+  z-index: 2;
 `
 
 export const PostContent = styled.p`
