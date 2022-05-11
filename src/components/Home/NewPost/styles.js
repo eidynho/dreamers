@@ -35,6 +35,29 @@ export const NewPostTextArea = styled.textarea`
   resize: vertical;
 `
 
+export const SignInMessage = styled.p`
+  width: 96%;
+  margin: 8px auto -4px auto;
+  font-size: 12px;
+`
+
+export const SignInLink = styled.button`
+  font-family: 'Poppins', sans-serif;
+  font-size: 12px;
+  text-decoration: underline;
+  margin-left: 4px;
+  border: none;
+  background-color: transparent;
+  color: ${props => props.theme.color};
+  cursor: pointer;
+  transition: color 0.2s ease;
+
+  &:hover {
+  color: ${props => props.theme.secondary};
+  text-decoration: none;
+  }
+`
+
 export const NewPostMedias = styled.div`
   width: 100%;
   margin: auto;

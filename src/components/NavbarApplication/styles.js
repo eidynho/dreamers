@@ -110,3 +110,27 @@ export const UserSettings = styled.ul`
     backdrop-filter: blur(4px);
   }
 `
+
+export const Login = styled.button`
+  display: block;
+  font-family: 'Poppins', sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  margin: 0 32px 0 8px;
+  padding: 8px 12px;
+  background-color: transparent;
+  color: ${props => props.theme.secondary};
+  border: 2px solid ${props => props.theme.secondary};
+  border-radius: 24px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+
+  &:hover {
+    color: ${props => props.theme.secondaryOnHover};
+    border: 2px solid ${props => props.theme.secondaryOnHover};
+  }
+
+  @media (min-width: 290px) {
+    padding: 8px 24px;
+  }
+`
