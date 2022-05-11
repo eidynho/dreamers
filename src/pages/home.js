@@ -1,16 +1,19 @@
 import { usePosts } from '../hooks/usePosts'
 
-import { AllPosts } from '../components/AllPosts'
-import { Container, DashboardContent, Timeline } from '../styles/homeStyles'
+import { NavbarApplication } from '../components/NavbarApplication'
+import { AllPosts } from '../components/Home/AllPosts'
 import { UserInfo } from '../components/UserInfo'
-import { NewPost } from '../components/NewPost'
+import { NewPost } from '../components/Home/NewPost'
 
-export default function Dashboard() {
+import { Container, HomeContent, Timeline } from '../styles/homeStyles'
+
+export default function Home() {
   const { posts } = usePosts()
 
   return (
     <>
-      <DashboardContent>
+      <NavbarApplication />
+      <HomeContent>
         <Container>
           <UserInfo />
 
@@ -27,7 +30,7 @@ export default function Dashboard() {
           </Timeline>
 
         </Container>
-      </DashboardContent>
+      </HomeContent>
     </>
   )
 }

@@ -1,7 +1,6 @@
-import Image from 'next/image'
 import styled from 'styled-components'
 
-export const DashboardContent = styled.div`
+export const HomeContent = styled.div`
   height: 100vh;
   width: 100vw;
   background: ${props => props.theme.body};

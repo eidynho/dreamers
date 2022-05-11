@@ -4,7 +4,9 @@ import { CommentAuthor, CommentAvatar, CommentContent, CommentContentWrapper, Co
 
 export function AllComments({ idComment, comment, author }) {
 
-
+  function pushToProfile() {
+    Router.push(`/user/${author.id}`)
+  }
 
   return (
     <CommentWrapper>
@@ -14,7 +16,7 @@ export function AllComments({ idComment, comment, author }) {
       />
 
       <CommentContentWrapper>
-        <CommentAuthor>{author.name}</CommentAuthor>
+        <CommentAuthor onClick={pushToProfile}>{author.name}</CommentAuthor>
         <CommentContent>{comment}</CommentContent>
       </CommentContentWrapper>
     </CommentWrapper>

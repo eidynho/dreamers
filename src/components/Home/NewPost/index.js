@@ -1,8 +1,8 @@
 import { useState } from 'react'
 
 import { push, ref } from 'firebase/database'
-import { useAuth } from '../../hooks/useAuth'
-import { database } from '../../services/firebase'
+import { useAuth } from '../../../hooks/useAuth'
+import { database } from '../../../services/firebase'
 
 import { NewPostAvatar, NewPostMedias, NewPostTextArea, NewPostTextConfig, NewPostWrapper, PublishButton } from "./styles";
 

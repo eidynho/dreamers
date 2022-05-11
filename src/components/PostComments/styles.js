@@ -8,12 +8,6 @@ export const CommentWrapper = styled.div`
   border-radius: 24px;
   display: flex;
   align-items: flex-start;
-  transition: all 0.2s ease;
-  cursor: pointer;
-
-  &:hover {
-    filter: brightness(1.2);
-  }
 `
 
 export const CommentAvatar = styled.img`
@@ -35,7 +29,10 @@ export const CommentAuthor = styled.span`
   font-size: 14px;
   cursor: pointer;
   transition: color 0.2s ease;
-  z-index: 2;
+
+  &:hover {
+    color: ${props => props.theme.secondaryOnHover}
+  }
 `
 
 export const CommentContent = styled.p`
@@ -52,4 +49,11 @@ export const CommentContent = styled.p`
   @media (min-width: 400px) {
     width: 96%;
   }
+`
+
+
+export const CommentTitle = styled.h3`
+  width: 92%;
+  margin: auto;
+  font-weight: 400;
 `

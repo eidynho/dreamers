@@ -1,7 +1,7 @@
 import Router from 'next/router'
 
 import { UserInfo } from '../UserInfo'
-import { PostContent, PostContentWrapper } from '../AllPosts/styles'
+import { PostContent, PostContentWrapper } from '../Home/AllPosts/styles'
 import { Container, PostAuthor, PostWrapper, PostAvatar, MainContent } from './styles'
 
 
