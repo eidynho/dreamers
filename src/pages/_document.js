@@ -39,7 +39,6 @@ export default class MyDocument extends Document {
             rel="stylesheet"
             href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700&display=swap"
           />
-          <title>Eidy's social media</title>
         </Head>
         <body>
           <Main />

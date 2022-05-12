@@ -1,3 +1,5 @@
+import Head from 'next/head'
+
 import { ThemeProvider } from 'styled-components'
 import { theme } from '../styles/theme'
 import { GlobalStyle } from '../styles/globalStyle'
@@ -10,6 +12,9 @@ export default function MyApp({ Component, pageProps }) {
 
   return (
       <ThemeProvider theme={theme}>
+        <Head>
+          <title>Uma social media</title>
+        </Head>
         <AuthContextProvider>
           <GlobalStyle />
           <Component {...pageProps} />
