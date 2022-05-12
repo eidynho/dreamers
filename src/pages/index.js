@@ -1,11 +1,11 @@
-import { Navbar } from '../components/Index/Navbar'
 import { Header } from '../components/Index/Header'
+import { NavbarApplication } from '../components/NavbarApplication'
 
 export default function Index() {
 
   return (
     <>
-        <Navbar />
+        <NavbarApplication />
         <Header />
     </>
   )

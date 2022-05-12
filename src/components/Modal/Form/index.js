@@ -119,7 +119,7 @@ export const FormModal = () => {
 
               {isSubmitting 
                 ? <Player src={loadingJson} autoplay loop style={{height: '120px', width: '120px'}} />
-                : <ButtonForm type="submit">Send Request</ButtonForm>
+                : <ButtonForm type="submit">Enviar mensagem</ButtonForm>
               }
             </Form>
           )}

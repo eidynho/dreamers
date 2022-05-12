@@ -1,8 +1,12 @@
 import styled from 'styled-components'
 
 export const HeaderBox = styled.header`
-  background: ${props => props.theme.primary};
-  height: 80vh;
+  height: 90vh;
+
+  background-color: #121214;
+  opacity: 1;
+  background-image: radial-gradient(#633AD9 1.25px, #121214 1.25px);
+  background-size: 25px 25px;
 `
 
 export const Container = styled.div`
@@ -11,24 +15,34 @@ export const Container = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
   margin: auto;
 `
 
 export const Title = styled.h1`
-  font-size: 48px;
+  font-size: 40px;
   text-align: center;
   color: ${props => props.theme.primaryText};
-  margin: 80px 16px 0;
-  line-height: 64px;
+  margin: 0 24px 8px;
+  line-height: 48px;
+
+  @media (min-width: 600px) {
+    font-size: 48px;
+    line-height: 64px;
+  }
 `
 
 export const Subtitle = styled.p`
-  width: 70%;
-  font-size: 18px;
-  font-weight: 500;
+  width: 80%;
+  font-size: 16px;
+  font-weight: 400;
   text-align: center;
   color: ${props => props.theme.primaryText};
   margin: 8px 0 24px 0;
+
+  @media (min-width: 600px) {
+    font-size: 18px;
+  }
 `
 
 export const BtnDiscover = styled.button`

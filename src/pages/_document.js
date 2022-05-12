@@ -34,11 +34,12 @@ export default class MyDocument extends Document {
       <Html lang='pt-br'>
         <Head>
           <meta name="theme-color" content='#121214' />
-          <link rel="shortcut icon" href="/static/favicon.ico" />
+          <link rel="shortcut icon" href="/favicon.ico" />
           <link
             rel="stylesheet"
             href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700&display=swap"
           />
+          <title>Eidy's social media</title>
         </Head>
         <body>
           <Main />

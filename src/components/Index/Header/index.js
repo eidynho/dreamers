@@ -14,13 +14,13 @@ export function Header() {
       <Container>
 
         <Title>
-          Eternize seu sonho conosco...
+          Quase uma rede social
         </Title>
         <Subtitle>
-          Compartilhe seu sonho do jeitinho que você lembra e eternize esse momento.
+          Crie postagens e compartilhe pensamentos, somos uma rede social feita por um estudante de desenvolvimento web.
         </Subtitle>
         <BtnDiscover onClick={redirectToSignUp}>
-          Compartilhe agora
+          Participe agora
         </BtnDiscover>
 
       </Container>

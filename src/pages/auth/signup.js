@@ -4,7 +4,7 @@ import Image from 'next/image'
 import { useAuth } from '../../hooks/useAuth'
 
 import googleImg from '../../images/google.svg'
-import { MainContentBox, ImageBox, SignUpContent, SignUpGoogle, Separator, Container } from "../../styles/signUpStyles"
+import { MainContentBox, SignUpContent, SignUpGoogle, Separator, Container, ButtonsBox, SignUpMessage } from "../../styles/signUpStyles"
 
 
 export default function SignUp() {
@@ -20,24 +20,20 @@ export default function SignUp() {
 
   return (
     <SignUpContent>
-      <ImageBox>
-
-      </ImageBox>
-
       <MainContentBox>
         <Container>
-
-          <SignUpGoogle onClick={handleLogin}>
-            <Image 
-              src={googleImg}
-              alt='Google image'
-              width={24}
-              height={24}
-            />
-            <span>Entrar com Google</span>
-          </SignUpGoogle>
-          <Separator>Ou crie uma conta</Separator>
-
+          <SignUpMessage>Faça seu login</SignUpMessage>
+          <ButtonsBox>
+            <SignUpGoogle onClick={handleLogin}>
+              <Image 
+                src={googleImg}
+                alt='Google image'
+                width={24}
+                height={24}
+              />
+              <span>Entrar com Google</span>
+            </SignUpGoogle>
+          </ButtonsBox>
         </Container>
       </MainContentBox>
     </SignUpContent>
