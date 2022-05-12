@@ -47,3 +47,20 @@ export const UserInfoAvatar = styled(Image)`
   border-radius: 50%;
   margin-top: 80px;
 `
+
+export const UserIconWrapper = styled.div`
+  height: 100px;
+  width: 100px;
+  border-radius: 50%;
+  background-color: ${props => props.theme.tertiary};
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  overflow: hidden;
+`
+
+export const UserIcon = styled(Image)`
+  border-radius: 50%;
+  margin-top: 80px;
+  filter: invert(3%) sepia(2%) saturate(5464%) hue-rotate(198deg) brightness(93%) contrast(91%);
+`

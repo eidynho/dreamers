@@ -4,6 +4,7 @@ import { push, ref } from 'firebase/database'
 import { useAuth } from '../../hooks/useAuth'
 import { database } from '../../services/firebase'
 
+import { SignInMessage, SignInLink } from '../Home/NewPost/styles'
 import { NewCommentAvatar, NewCommentMedias, NewCommentTextArea, NewCommentTextConfig, NewCommentWrapper, PublishButton } from "./styles";
 
 export function NewComment({ idPost }) {
@@ -28,6 +29,10 @@ export function NewComment({ idPost }) {
     setNewComment('')
   }
 
+  function pushToSignUp() {
+    Router.push('/auth/signup')
+  }
+
   return (
     <NewCommentWrapper
       onSubmit={handleCreateNewComment}
@@ -47,7 +52,14 @@ export function NewComment({ idPost }) {
           onChange={event => setNewComment(event.target.value)}
           value={newComment}
         />
-
+        { !user && (
+          <SignInMessage>
+            Não tem uma conta?
+            <SignInLink onClick={pushToSignUp}>
+              Clique aqui para criar.
+            </SignInLink>
+          </SignInMessage>
+        )}
         <NewCommentMedias>
           <PublishButton
             type="submit"

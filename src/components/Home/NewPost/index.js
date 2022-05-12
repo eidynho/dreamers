@@ -29,7 +29,7 @@ export function NewPost() {
     setNewPost('')
   }
 
-  function handleSingUp() {
+  function pushToSignUp() {
     Router.push('/auth/signup')
   }
 
@@ -56,7 +56,7 @@ export function NewPost() {
         { !user && (
           <SignInMessage>
             Não tem uma conta?
-            <SignInLink onClick={handleSingUp}>
+            <SignInLink onClick={pushToSignUp}>
               Clique aqui para criar.
             </SignInLink>
           </SignInMessage>

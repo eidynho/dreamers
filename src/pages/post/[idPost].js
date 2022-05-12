@@ -12,6 +12,7 @@ import { Container, MainContent } from "../../components/PostDetails/styles"
 import { useComments } from "../../hooks/useComments"
 import { CommentTitle } from "../../components/PostComments/styles"
 import { NavbarApplication } from "../../components/NavbarApplication"
+import { Footer } from "../../components/Footer"
 
 export default function IdPost() {
   const router = useRouter()
@@ -51,6 +52,7 @@ export default function IdPost() {
               )).reverse()}
         </MainContent>
       </Container>
+      <Footer />
     </>
   )
 }

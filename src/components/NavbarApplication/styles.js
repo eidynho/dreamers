@@ -59,7 +59,7 @@ export const UserBox = styled.div`
   margin-right: 32px;
 
   &:hover ul {
-    display: block;
+    display: flex;
   }
 `
 
@@ -91,12 +91,15 @@ export const UserSettings = styled.ul`
   position: absolute;
   top: 64px;
   right: -24px;
-  width: 300px;
-  height: 500px;
+  width: 280px;
+  height: 80px;
   background-color: rgba(18, 18, 20, 0.8);
   border-radius: 24px;
   backdrop-filter: blur(4px);
   box-shadow: 0px 10px 50px rgb(0, 0, 0, 0.4);
+
+  align-items: center;
+  justify-content: center;
 
   &::before {
     content: '';
@@ -109,6 +112,26 @@ export const UserSettings = styled.ul`
     background-color: rgba(18, 18, 20, 0.8);
     backdrop-filter: blur(4px);
   }
+`
+
+export const ItemBox = styled.li`
+  list-style: none;
+  width: 100%;
+  height: 100%;
+  border-radius: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.2s ease;
+
+  &:hover {
+    background-color: ${props => props.theme.primary};
+  }
+`
+
+export const ProfileItem = styled.a`
+  color: ${props => props.theme.color};
 `
 
 export const Login = styled.button`
@@ -132,5 +155,35 @@ export const Login = styled.button`
 
   @media (min-width: 290px) {
     padding: 8px 24px;
+  }
+`
+
+
+export const FloattingButton = styled.div`
+  width: 64px;
+  height: 64px;
+  background: ${props => props.theme.secondary};
+  border: none;
+  border-radius: 50%;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.15);
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  color: #FFF;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  z-index: 9;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &:hover {
+    background:  ${props => props.theme.secondaryOnHover};
+  }
+
+  img {
+    width: 34px;
+    height: 30px;
+    filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(360deg) brightness(105%) contrast(101%);
   }
 `

@@ -50,3 +50,5 @@ export const BtnDiscover = styled.button`
     background-color: ${props => props.theme.secondaryOnHover};
   }
 `
+
+

@@ -1,8 +1,10 @@
 import Router from 'next/router'
 
-import { BtnDiscover, Container, HeaderBox, Subtitle, Title } from "./styles";
+
+import { BtnDiscover, Container, FloattingButton, HeaderBox, Subtitle, Title } from "./styles";
 
 export function Header() {
+
   function redirectToSignUp() {
     Router.push('/auth/signup')
   }
