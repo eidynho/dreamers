@@ -24,12 +24,17 @@ export const Container = styled.div`
 export const Title = styled.h1`
   font-family: ${props => props.theme.fontSecondary};
   font-weight: 400;
-  font-size: 48px;
+  font-size: 32px;
   text-align: center;
   color: ${props => props.theme.color};
   margin: 0 24px 8px;
   line-height: 48px;
   z-index: 2;
+
+  @media (min-width: 300px) {
+    font-size: 48px;
+    line-height: 64px;
+  }
 
   @media (min-width: 600px) {
     font-size: 56px;
@@ -39,12 +44,16 @@ export const Title = styled.h1`
 
 export const Subtitle = styled.p`
   width: 80%;
-  font-size: 16px;
+  font-size: 14px;
   font-weight: 400;
   text-align: center;
   color: ${props => props.theme.color};
   margin: 8px 0 24px 0;
   z-index: 2;
+
+  @media (min-width: 300px) {
+    font-size: 16px;
+  }
 
   @media (min-width: 600px) {
     font-size: 18px;
