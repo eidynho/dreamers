@@ -33,20 +33,20 @@ export const FormModal = () => {
     name: yup.string()
       .min(2, 'Nome muito pequeno')
       .max(80, 'Nome muito grande')
-      .required('Nome obrigatório!'),
+      .required('Escreva seu nome.'),
 
     email: yup.string()
       .email('E-mail inválido!')
-      .required('E-mail é obrigatório!'),
+      .required('Insira um e-mail.'),
 
     subject: yup.string()
       .max(100, 'Assunto muito grande')
-      .required('Assunto é obrigatório!'),
+      .required('Escreva um assunto.'),
 
     message: yup.string()
       .min(3, 'Mensagem muito pequena')
       .max(3000, 'Mensagem muito grande')
-      .required('Mensagem é obrigatória'),
+      .required('Escreva uma mensagem.'),
   })
   
   return (

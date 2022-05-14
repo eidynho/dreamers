@@ -29,7 +29,7 @@ export const MainContentBox = styled.main`
 `
 
 export const Container = styled.div`
-  height: 100%;
+  height: 88%;
   max-width: 400px;
   margin: auto;
   display: flex;
