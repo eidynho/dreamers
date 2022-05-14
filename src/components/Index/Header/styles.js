@@ -3,7 +3,7 @@ import styled from 'styled-components'
 import { Player as PlayerLottiefiles } from '@lottiefiles/react-lottie-player'
 
 export const HeaderBox = styled.header`
-  height: 91vh;
+  height: 100vh;
 
   background-color: ${props => props.theme.body};
   opacity: 1;
@@ -65,8 +65,8 @@ export const BtnDiscover = styled.button`
   font-family: ${props => props.theme.fontPrimary};
   font-size: 16px;
   font-weight: 600;
-  margin: 0 32px 0 8px;
-  padding: 12px 32px;
+  margin: 0 8px;
+  padding: 12px 40px;
   outline: none;
   border: none;
   background-color: ${props => props.theme.secondary};

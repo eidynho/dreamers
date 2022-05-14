@@ -51,23 +51,8 @@ export function NavbarApplication() {
 
   return (
     <>
-      <Modal
-        showModal={showModal}
-        setShowModal={setShowModal}
-        closeModal={closeModal}
-        className="modal"
-      />
-      <FloattingButton onClick={openModal}>
-        <Image 
-          src="/images/email.png"
-          alt='E-mail'
-          width={34}
-          height={30}
-        />
-      </FloattingButton>
       <NavbarBox>
         <Container>
-
           <Logo onClick={pushToIndex}>
             Dreamers
           </Logo>
@@ -93,9 +78,23 @@ export function NavbarApplication() {
             ) : (
               <Login onClick={pushToSignUp}>Entrar</Login>
             )}
-
         </Container>
       </NavbarBox>
+
+      <Modal
+        showModal={showModal}
+        setShowModal={setShowModal}
+        closeModal={closeModal}
+        className="modal"
+      />
+      <FloattingButton onClick={openModal}>
+        <Image 
+          src="/images/email.png"
+          alt="mail"
+          width={34}
+          height={30}
+        />
+      </FloattingButton>
     </>
   )
 }
