@@ -51,6 +51,20 @@ export function NavbarApplication() {
 
   return (
     <>
+      <Modal
+        showModal={showModal}
+        setShowModal={setShowModal}
+        closeModal={closeModal}
+        className="modal"
+      />
+      <FloattingButton onClick={openModal}>
+        <Image 
+          src="/images/email.png"
+          alt="mail"
+          width={34}
+          height={30}
+        />
+      </FloattingButton>
       <NavbarBox>
         <Container>
           <Logo onClick={pushToIndex}>
@@ -81,20 +95,7 @@ export function NavbarApplication() {
         </Container>
       </NavbarBox>
 
-      <Modal
-        showModal={showModal}
-        setShowModal={setShowModal}
-        closeModal={closeModal}
-        className="modal"
-      />
-      <FloattingButton onClick={openModal}>
-        <Image 
-          src="/images/email.png"
-          alt="mail"
-          width={34}
-          height={30}
-        />
-      </FloattingButton>
+      
     </>
   )
 }
