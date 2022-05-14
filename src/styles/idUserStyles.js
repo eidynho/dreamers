@@ -53,7 +53,7 @@ export const ParagraphDevelopment = styled.p`
   text-align: center;
 `
 
-export const PlayerFormSuccess = styled(PlayerLottiefiles)`
+export const PlayerMaintence = styled(PlayerLottiefiles)`
   width: 100%;
   height: 180px;
 

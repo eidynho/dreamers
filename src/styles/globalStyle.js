@@ -10,7 +10,7 @@ export const GlobalStyle = createGlobalStyle`
   body {
     background-color: #121214;
     color: #FFF;
-    font-family: 'Poppins', sans-serif;
+    font-family: ${props => props.theme.fontPrimary};
     transition: all 0.4s ease;
     overflow: overlay;
   }

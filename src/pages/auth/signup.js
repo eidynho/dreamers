@@ -3,8 +3,9 @@ import Image from 'next/image'
 
 import { useAuth } from '../../hooks/useAuth'
 
-import googleImg from '../../images/google.svg'
-import { MainContentBox, SignUpContent, SignUpGoogle, Separator, Container, ButtonsBox, SignUpMessage } from "../../styles/signUpStyles"
+import happyFox from '../../../public/images/happyFox.json'
+import googleImg from '../../../public/images/google.svg'
+import { MainContentBox, SignUpContent, SignUpGoogle, Separator, Container, ButtonsBox, SignUpMessage, PlayerHappyFox } from "../../styles/signUpStyles"
 
 
 export default function SignUp() {
@@ -34,6 +35,14 @@ export default function SignUp() {
               <span>Entrar com Google</span>
             </SignUpGoogle>
           </ButtonsBox>
+
+          <PlayerHappyFox
+          src={happyFox}
+          autoplay
+          loop
+          speed={0.6}
+        />
+
         </Container>
       </MainContentBox>
     </SignUpContent>

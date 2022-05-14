@@ -23,12 +23,14 @@ export const Container = styled.div`
 `
 
 export const Logo = styled.h3`
+  font-family: ${props => props.theme.fontSecondary};
+  font-weight: 400;
   font-size: 28px;
   margin: 24px 0 16px;
   color: ${props => props.theme.color};
 
   @media (min-width: 400px) {
-    font-size: 32px;
+    font-size: 40px;
   }
 `
 
@@ -37,6 +39,7 @@ export const MessageWrapper = styled.div`
 `
 
 export const MadeWithLove = styled.p`
+  font-family: ${props => props.theme.fontPrimary};
   font-size: 12px;
   font-weight: 300;
   text-align: center;

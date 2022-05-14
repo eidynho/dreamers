@@ -1,12 +1,11 @@
-import Image from 'next/image'
 
-import heartImg from '../../images/heart.svg'
+import heartImg from '../../../public/images/heart.svg'
 
-import githubImg from '../../images/github.svg'
-import linkedinImg from '../../images/linkedin.svg'
-import twitterImg from '../../images/twitter.svg'
+import githubImg from '../../../public/images/github.svg'
+import linkedinImg from '../../../public/images/linkedin.svg'
+import twitterImg from '../../../public/images/twitter.svg'
 
-import { FooterComponent, Container, WaveFooter, WavesTransparent, WavesTransparent2, MadeWithLove, Logo, SocialLinkWrapper, BulletDot, MessageWrapper, BuiltBy, Heart, SocialMedia } from "./styles";
+import { FooterComponent, Container, WaveFooter, WavesTransparent, WavesTransparent2, MadeWithLove, Logo, SocialLinkWrapper, BulletDot, MessageWrapper, Heart, SocialMedia } from "./styles";
 
 
 export function Footer() {

@@ -11,6 +11,10 @@ export function NavbarApplication() {
   const { user } = useAuth()
   const [showModal, setShowModal] = useState(false)
 
+  function pushToIndex() {
+    Router.push('/')
+  }
+
   function pushToHome() {
     Router.push('/home')
   }
@@ -64,8 +68,8 @@ export function NavbarApplication() {
       <NavbarBox>
         <Container>
 
-          <Logo onClick={pushToHome}>
-            Home
+          <Logo onClick={pushToIndex}>
+            Dreamers
           </Logo>
           <MenuList>
             <MenuItem onClick={pushToHome}>Home</MenuItem>

@@ -6,5 +6,6 @@ export const theme = {
   secondaryOnHover: '#7A56E6',
   tertiary: '#232323',
 
-  primaryText: '#FAFAFA',
+  fontPrimary: 'Poppins, sans-serif',
+  fontSecondary: 'Pacifico, sans-serif',
 }

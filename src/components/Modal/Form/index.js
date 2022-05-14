@@ -5,8 +5,8 @@ import * as yup from 'yup'
 
 import { Player } from '@lottiefiles/react-lottie-player'
 
-import formSuccessJson from '../../../images/formSuccessImg.json'
-import loadingJson from '../../../images/loading.json'
+import formSuccessJson from '../../../../public/images/formSuccessImg.json'
+import loadingJson from '../../../../public/images/loading.json'
 
 import { ButtonForm, Form, FormInput, FormTextarea, PlayerFormSuccess } from './styles'
 

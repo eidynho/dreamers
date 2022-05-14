@@ -1,7 +1,7 @@
 import Router from 'next/router'
 import { useAuth } from '../../hooks/useAuth'
 
-import userSvg from '../../images/user.svg'
+import userSvg from '../../../public/images/user.svg'
 import { UserInfoWrapper, UserInfoAvatar, UserIconWrapper, UserIcon } from './styles'
 
 export function UserInfo() {

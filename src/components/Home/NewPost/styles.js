@@ -22,7 +22,7 @@ export const NewPostTextConfig = styled.div`
 `
 
 export const NewPostTextArea = styled.textarea`
-  font-family: 'Poppins', sans-serif;
+  font-family: ${props => props.theme.fontPrimary};
   font-size: 14px;
   background-color: ${props => props.theme.tertiary};
   color: ${props => props.theme.color};
@@ -42,7 +42,7 @@ export const SignInMessage = styled.p`
 `
 
 export const SignInLink = styled.button`
-  font-family: 'Poppins', sans-serif;
+  font-family: ${props => props.theme.fontPrimary};
   font-size: 12px;
   text-decoration: underline;
   margin-left: 4px;
@@ -68,7 +68,7 @@ export const NewPostMedias = styled.div`
 export const MediaButton = styled.button`
   background-color: ${props => props.theme.primary};
   color: ${props => props.theme.color};
-  font-family: 'Poppins', sans-serif;
+  font-family: ${props => props.theme.fontPrimary};
   font-weight: 500;
   width: 48px;
   height: 48px;
@@ -94,7 +94,7 @@ export const MediaButton = styled.button`
 export const PublishButton = styled.button`
   background-color: ${props => props.theme.primary};
   color: ${props => props.theme.color};
-  font-family: 'Poppins', sans-serif;
+  font-family: ${props => props.theme.fontPrimary};
   font-weight: 500;
   width: 48%;
   height: 48px;

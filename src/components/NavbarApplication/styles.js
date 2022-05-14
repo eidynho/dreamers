@@ -18,11 +18,18 @@ export const Container = styled.div`
 `
 
 export const Logo = styled.div`
-  font-weight: 700;
-  font-size: 20px;
-  color: ${props => props.theme.primaryText};
+  font-family: ${props => props.theme.fontSecondary};
+  font-weight: 400;
+  font-size: 26px;
+  color: ${props => props.theme.color};
   margin-left: 32px;
   cursor: pointer;
+  transition: all 0.2s ease;
+
+  &:hover {
+    color: ${props => props.theme.secondaryOnHover};
+    filter: brightness(0.8);
+  }
 `
 
 export const MenuList = styled.ul`
@@ -41,13 +48,14 @@ export const MenuList = styled.ul`
 export const MenuItem = styled.li`
   font-size: 16px;
   font-weight: 600;
-  color: ${props => props.theme.primaryText};
+  color: ${props => props.theme.color};
   list-style: none;
   cursor: pointer;
-`
+  transition: all 0.2s ease;
 
-export const ImageStyled = styled(Image)`
-  filter: ${props => props.theme.primaryTextFilter};
+  &:hover {
+    filter: brightness(0.8);
+  }
 `
 
 export const UserBox = styled.div`
@@ -96,6 +104,7 @@ export const UserSettings = styled.ul`
   background-color: rgba(18, 18, 20, 0.8);
   border-radius: 24px;
   backdrop-filter: blur(4px);
+  list-style: none;
   box-shadow: 0px 10px 50px rgb(0, 0, 0, 0.4);
 
   align-items: center;
@@ -136,7 +145,7 @@ export const ProfileItem = styled.a`
 
 export const Login = styled.button`
   display: block;
-  font-family: 'Poppins', sans-serif;
+  font-family: ${props => props.theme.fontPrimary};
   font-size: 16px;
   font-weight: 600;
   margin: 0 32px 0 8px;

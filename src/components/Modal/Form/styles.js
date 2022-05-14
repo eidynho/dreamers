@@ -19,7 +19,7 @@ export const FormInput = styled.input.attrs(({ name, type, placeholder }) => ({
   type: type,
   placeholder: placeholder,
 }))`
-  font-family: 'Poppins', sans-serif;
+  font-family: ${props => props.theme.fontPrimary};
   background-color: transparent;
   border: none;
   border-bottom: 1px solid ${props => props.theme.color};
@@ -32,7 +32,7 @@ export const FormInput = styled.input.attrs(({ name, type, placeholder }) => ({
 export const FormTextarea = styled.textarea.attrs(({ placeholder }) => ({
   placeholder: placeholder,
 }))`
-  font-family: 'Poppins', sans-serif;
+  font-family: ${props => props.theme.fontPrimary};
   background-color: transparent;
   border: none;
   border-bottom: 1px solid ${props => props.theme.color};
@@ -44,7 +44,7 @@ export const FormTextarea = styled.textarea.attrs(({ placeholder }) => ({
 `
 
 export const ButtonForm = styled.button`
-  font-family: 'Poppins', sans-serif;
+  font-family: ${props => props.theme.fontPrimary};
   font-weight: 700;
   text-transform: uppercase;
   width: 100%;

@@ -22,7 +22,7 @@ export const NewCommentTextConfig = styled.div`
 `
 
 export const NewCommentTextArea = styled.textarea`
-  font-family: 'Poppins', sans-serif;
+  font-family: ${props => props.theme.fontPrimary};
   font-size: 14px;
   background-color: ${props => props.theme.tertiary};
   color: ${props => props.theme.color};
@@ -45,7 +45,7 @@ export const NewCommentMedias = styled.div`
 export const MediaButton = styled.button`
   background-color: ${props => props.theme.primary};
   color: ${props => props.theme.color};
-  font-family: 'Poppins', sans-serif;
+  font-family: ${props => props.theme.fontPrimary};
   font-weight: 500;
   width: 48px;
   height: 48px;
@@ -71,7 +71,7 @@ export const MediaButton = styled.button`
 export const PublishButton = styled.button`
   background-color: ${props => props.theme.primary};
   color: ${props => props.theme.color};
-  font-family: 'Poppins', sans-serif;
+  font-family: ${props => props.theme.fontPrimary};
   font-weight: 500;
   width: 48%;
   height: 48px;

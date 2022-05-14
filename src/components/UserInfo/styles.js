@@ -15,15 +15,15 @@ export const UserInfoWrapper = styled.aside`
 
   h4 {
     margin-top: 8px;
-    color: ${props => props.theme.primaryText};
+    color: ${props => props.theme.color};
   }
 
   button {
-    font-family: 'Poppins', sans-serif;
+    font-family: ${props => props.theme.fontPrimary};
     font-size: 12px;
     font-weight: 700;
     text-transform: uppercase;
-    color: ${props => props.theme.primaryText};
+    color: ${props => props.theme.color};
     margin-top: 24px;
     width: 80%;
     height: 40px;

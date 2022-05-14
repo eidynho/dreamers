@@ -2,9 +2,9 @@
 import { NavbarApplication } from "../../components/NavbarApplication"
 import { useAuth } from "../../hooks/useAuth"
 
-import maintenceJson from '../../images/maintence.json'
+import maintenceJson from '../../../public/images/maintence.json'
 
-import { Container, ParagraphDevelopment, PlayerFormSuccess, TitleDevelopment } from "../../styles/idUserStyles"
+import { Container, ParagraphDevelopment, PlayerMaintence, TitleDevelopment } from "../../styles/idUserStyles"
 
 
 export default function UserProfile() {
@@ -17,7 +17,7 @@ const { user } = useAuth()
         <ParagraphDevelopment>
           Olá {user && user.name}, estou desenvolvendo essa página nesse momento :)
         </ParagraphDevelopment>
-        <PlayerFormSuccess
+        <PlayerMaintence
           src={maintenceJson}
           autoplay
           loop

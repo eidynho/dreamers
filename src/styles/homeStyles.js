@@ -2,7 +2,7 @@ import styled from 'styled-components'
 
 export const HomeContent = styled.div`
   height: 100vh;
-  width: 100vw;
+  width: 100%;
   background: ${props => props.theme.body};
 `
 

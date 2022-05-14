@@ -1,11 +1,13 @@
 import styled from 'styled-components'
 
-export const HeaderBox = styled.header`
-  height: 90vh;
+import { Player as PlayerLottiefiles } from '@lottiefiles/react-lottie-player'
 
-  background-color: #121214;
+export const HeaderBox = styled.header`
+  height: 91vh;
+
+  background-color: ${props => props.theme.body};
   opacity: 1;
-  background-image: radial-gradient(#633AD9 1.25px, #121214 1.25px);
+  background-image: radial-gradient(#633AD9 1.25px, ${props => props.theme.primary} 1.25px);
   background-size: 25px 25px;
 `
 
@@ -20,14 +22,17 @@ export const Container = styled.div`
 `
 
 export const Title = styled.h1`
-  font-size: 40px;
+  font-family: ${props => props.theme.fontSecondary};
+  font-weight: 400;
+  font-size: 48px;
   text-align: center;
-  color: ${props => props.theme.primaryText};
+  color: ${props => props.theme.color};
   margin: 0 24px 8px;
   line-height: 48px;
+  z-index: 2;
 
   @media (min-width: 600px) {
-    font-size: 48px;
+    font-size: 56px;
     line-height: 64px;
   }
 `
@@ -37,8 +42,9 @@ export const Subtitle = styled.p`
   font-size: 16px;
   font-weight: 400;
   text-align: center;
-  color: ${props => props.theme.primaryText};
+  color: ${props => props.theme.color};
   margin: 8px 0 24px 0;
+  z-index: 2;
 
   @media (min-width: 600px) {
     font-size: 18px;
@@ -47,7 +53,7 @@ export const Subtitle = styled.p`
 
 export const BtnDiscover = styled.button`
   display: block;
-  font-family: 'Poppins', sans-serif;
+  font-family: ${props => props.theme.fontPrimary};
   font-size: 16px;
   font-weight: 600;
   margin: 0 32px 0 8px;
@@ -55,14 +61,29 @@ export const BtnDiscover = styled.button`
   outline: none;
   border: none;
   background-color: ${props => props.theme.secondary};
+  box-shadow: 10px 16px 40px 0 rgb(99 58 217 / 8%);
   color: ${props => props.theme.color};
   border-radius: 24px;
   cursor: pointer;
   transition: all 0.2s ease;
+  z-index: 2;
 
   &:hover {
     background-color: ${props => props.theme.secondaryOnHover};
   }
 `
 
+export const PlayerPurpleLines = styled(PlayerLottiefiles)`
+  width: 100%;
+  height: 50%;
+  position: absolute;
+  top: 120px;
+  left: -56px;
+  opacity: 0.4;
+  transform: rotateZ(16deg);
 
+  @media (min-width: 1000px) {
+    width: 88%;
+
+  }
+`
