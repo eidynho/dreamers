@@ -1,8 +1,8 @@
 import { useState } from 'react'
 
-import { push, ref } from 'firebase/database'
 import { useAuth } from '../../hooks/useAuth'
 import { database } from '../../services/firebase'
+import { push, ref } from 'firebase/database'
 
 import { SignInMessage, SignInLink } from '../Home/NewPost/styles'
 import { NewCommentAvatar, NewCommentMedias, NewCommentTextArea, NewCommentTextConfig, NewCommentWrapper, PublishButton } from "./styles";

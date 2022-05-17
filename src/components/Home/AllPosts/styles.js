@@ -8,12 +8,7 @@ export const PostWrapper = styled.div`
   border-radius: 24px;
   display: flex;
   align-items: flex-start;
-  transition: all 0.2s ease;
-  cursor: pointer;
-
-  &:hover {
-    filter: brightness(1.2);
-  }
+  position: relative;
 `
 
 export const PostAvatar = styled.img`
@@ -51,5 +46,30 @@ export const PostContent = styled.p`
 
   @media (min-width: 400px) {
     width: 96%;
+  }
+`
+
+export const InteractionButtons = styled.div`
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  width: 98%;
+  margin: 8px auto 0;
+  gap: 40px;
+`
+
+export const InteractionButton = styled.button`
+  border: none;
+  outline: none;
+  background-color: transparent;
+  cursor: pointer;
+
+  img {
+    filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(360deg) brightness(105%) contrast(101%);
+    transition: all 0.2s ease;
+
+    &:hover {
+      filter: invert(47%) sepia(43%) saturate(7440%) hue-rotate(237deg) brightness(93%) contrast(93%);
+    }
   }
 `
