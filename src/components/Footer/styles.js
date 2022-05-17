@@ -51,9 +51,7 @@ export const MadeWithLove = styled.p`
 `
 
 export const Heart = styled(Image)`
-  width: 16px;
-  height: 16px;
-  filter: invert(31%) sepia(97%) saturate(7240%) hue-rotate(357deg) brightness(100%) contrast(114%);
+  filter: invert(42%) sepia(62%) saturate(4216%) hue-rotate(321deg) brightness(81%) contrast(109%);
 
   animation-name: heartAnimation;
   animation-timing-function: ease-in-out;

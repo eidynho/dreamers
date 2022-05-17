@@ -1,13 +1,9 @@
 import { useEffect, useState } from 'react'
 
-import { useAuth } from './useAuth'
-
 import { database } from '../services/firebase'
 import { onValue, ref } from 'firebase/database'
 
-
 export function usePosts() {
-  const { user } = useAuth()
   const [posts, setPosts] = useState([])
 
   useEffect(() => {
@@ -24,14 +20,12 @@ export function usePosts() {
           id: key,
           content: value.content,
           author: value.author,
-          likeCount: Object.values(value.likes ?? {}).length,
-          hasLiked: Object.values(value.likes ?? {}).some(like => like.authorId === user?.id)
         }
       })
       setPosts(parsedPosts)
     })
 
-  }, [user?.id])
+  }, [])
 
   return { posts }
 }

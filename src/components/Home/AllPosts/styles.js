@@ -8,7 +8,13 @@ export const PostWrapper = styled.div`
   border-radius: 24px;
   display: flex;
   align-items: flex-start;
-  position: relative;
+
+  cursor: pointer;
+  transition: all 0.2s ease;
+
+  &:hover {
+    filter: brightness(1.2);
+  }
 `
 
 export const PostAvatar = styled.img`
@@ -49,7 +55,7 @@ export const PostContent = styled.p`
   }
 `
 
-export const InteractionButtons = styled.div`
+/* export const InteractionButtons = styled.div`
   display: flex;
   justify-content: flex-end;
   align-items: center;
@@ -72,4 +78,4 @@ export const InteractionButton = styled.button`
       filter: invert(47%) sepia(43%) saturate(7440%) hue-rotate(237deg) brightness(93%) contrast(93%);
     }
   }
-`
+` */
